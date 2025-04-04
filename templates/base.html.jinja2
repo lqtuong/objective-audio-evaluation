@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>{{ page_title }}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+        integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+</head>
+
+<body onload="return randomQuestions();">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            {% block heading %}{% endblock %}
+        </div>
+    </div>
+
+    <div class="container" id="form_container">
+        <form id="theForm" action="{{ form_url }}" method="GET" onsubmit="return preventRepeatedSubmission();">
+            <div class="form-group">
+                <label for="name">Tên của bạn: </label>
+                <input class="form-control" type="text" inputmode="text" name="name" required>
+                <small class="form-text text-muted">required* (xin điền tên)</small>
+            </div>
+            <div class="form-group">
+                <label for="mail">Địa chỉ email: </label>
+                <input class="form-control" type="text" inputmode="email" placeholder="account@example.com" name="mail">
+                <small class="form-text text-muted"></small>
+            </div>
+            {% block form_questions %}{% endblock %}
+            <input type="text" name="formid" value="{{ form_id }}" hidden>
+            <input type="text" name="thank" value="Cảm ơn bạn một lần nữa vì đã tham gia thử nghiệm này!" hidden>
+            <input class="btn btn-info btn-lg" type="submit" value="Submit results" id="submitBtn">
+            <p class="text-muted">
+                
+            </p>
+        </form>
+    </div>
+
+    <div class="container" style="padding-top: 60px;">
+        <p class="text-center text-muted"></p>
+    </div>
+
+    <script type="text/javascript">
+        function preventRepeatedSubmission() {
+            document.getElementById('submitBtn').disabled = true;
+            setTimeout("submitBtn.disabled=false;", 5000);
+            return true;
+        };
+        function randomQuestions() {
+            questions_array = Array.from(document.getElementById("theForm").querySelectorAll(".form-group")).slice(2);
+            questions_array.forEach(function test(item){item.remove()});
+            questions_array = questions_array.sort((a, b) => 0.5 - Math.random());
+            questions_array.forEach(function test(item){document.getElementById("theForm").insertBefore(item, document.getElementById("submitBtn"))});
+            return True;
+        }
+    </script>
+</body>
+
+</html>

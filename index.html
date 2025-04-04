@@ -1,0 +1,1328 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>MOS Evaluation</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+        integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+</head>
+
+<body onload="return randomQuestions();">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+
+    <h1 class="display-4">Độ đo Mean Opinion Score (MOS)</h1>
+    <p class="lead">Đánh giá độ tự nhiên và thông minh của hệ thống TTS</p>
+    <hr class="my-4">
+    <p>
+        Cảm ơn bạn vì đã tham gia bài khảo sát này!
+    </p>
+    <p>
+        ---
+    </p>
+    <p>
+        Trong thí nghiệm này, chúng tôi sử dụng máy tính để tổng hợp giọng nói của con người.
+        Các tệp âm thanh sau đây chứa các bản ghi âm thật và giọng nói tổng hợp, và mỗi câu được kèm theo một bản ghi.
+        Các đối tượng được yêu cầu nghe bằng tai nghe và cho điểm theo thang sau đây dựa trên cảm nhận về của từng tệp âm thanh:
+        <ul>
+            <li>1 Very bad - Rất tệ (không thể nghe được, phát âm sai hoặc không rõ ràng toàn bộ câu nói)</li>
+            <li>2 Not good - Không được tốt (giọng quá nhiều yếu tố nhân tạo, giống robot)</li>
+            <li>3 Fair - Bình thường (nghe được nhưng không tự nhiên)</li>
+            <li>4 Good - Tốt (khá rõ ràng, khá tự nhiên)</li>
+            <li>5 Excellent - Xuất sắc (rõ ràng, là giọng người thật)</li>
+        </ul>
+    </p>
+    <p>
+        <b>Thứ tự các câu hỏi sau đây được sinh một cách ngẫu nhiên. Xin hãy làm lại từ đầu trong trường hợp bạn phải reload lại trang này!</b>
+    </p>
+
+        </div>
+    </div>
+
+    <div class="container" id="form_container">
+        <form id="theForm" action="https://script.google.com/macros/s/AKfycbxWHwOXOUGyxIg-ZWqqeF8a7iWcARif5IIC6ZOugECuLXCeT4pRgOYxZI5rTAmuScGpbQ/exec" method="GET" onsubmit="return preventRepeatedSubmission();">
+            <div class="form-group">
+                <label for="name">Tên của bạn: </label>
+                <input class="form-control" type="text" inputmode="text" name="name" required>
+                <small class="form-text text-muted">required* (xin điền tên)</small>
+            </div>
+            <div class="form-group">
+                <label for="mail">Địa chỉ email: </label>
+                <input class="form-control" type="text" inputmode="email" placeholder="account@example.com" name="mail">
+                <small class="form-text text-muted"></small>
+            </div>
+
+
+        <div class="card form-group">
+            <div class="card-header">Question 1: Đây là một lợi thế của Vinhomes Grand Park khi phân khu này đã bàn giao và đi vào vận hành, giúp khách hàng có thể ở ngay hoặc cho thuê.</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="audios/scratch/180843b78f3efc2df3f8187ea9c43ba9.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q1" id="q1_1" value="5" required>
+                    <label class="form-check-label" for="q1_1">5 Excellent - Xuất sắc (rõ ràng, là giọng người thật)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q1" id="q1_2" value="4" required>
+                    <label class="form-check-label" for="q1_2">4 Good - Tốt (khá rõ ràng, khá tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q1" id="q1_3" value="3" required>
+                    <label class="form-check-label" for="q1_3">3 Fair - Bình thường (nghe được nhưng không tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q1" id="q1_4" value="2" required>
+                    <label class="form-check-label" for="q1_4">2 Not good - Không được tốt (giọng quá nhiều yếu tố nhân tạo)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q1" id="q1_5" value="1" required>
+                    <label class="form-check-label" for="q1_5">1 Very bad - Rất tệ (không thể nghe được, phát âm sai hoặc không rõ ràng)</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="card form-group">
+            <div class="card-header">Question 2: Quá trình nâng lãi của Fed hơn một năm qua đã gây sức ép lên kim loại quý, do công cụ này không trả lãi cố định.</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="audios/scratch/b202eca8ac65e08f0b4ac523394600a8.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q2" id="q2_1" value="5" required>
+                    <label class="form-check-label" for="q2_1">5 Excellent - Xuất sắc (rõ ràng, là giọng người thật)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q2" id="q2_2" value="4" required>
+                    <label class="form-check-label" for="q2_2">4 Good - Tốt (khá rõ ràng, khá tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q2" id="q2_3" value="3" required>
+                    <label class="form-check-label" for="q2_3">3 Fair - Bình thường (nghe được nhưng không tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q2" id="q2_4" value="2" required>
+                    <label class="form-check-label" for="q2_4">2 Not good - Không được tốt (giọng quá nhiều yếu tố nhân tạo)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q2" id="q2_5" value="1" required>
+                    <label class="form-check-label" for="q2_5">1 Very bad - Rất tệ (không thể nghe được, phát âm sai hoặc không rõ ràng)</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="card form-group">
+            <div class="card-header">Question 3: Đối với từng quyền lợi bảo hiểm, công ty bảo hiểm lại quy định các loại giấy tờ khác nhau, được công khai trên website của doanh nghiệp.</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="audios/scratch/851da6ae984d409e4e75c4f987c7994a.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q3" id="q3_1" value="5" required>
+                    <label class="form-check-label" for="q3_1">5 Excellent - Xuất sắc (rõ ràng, là giọng người thật)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q3" id="q3_2" value="4" required>
+                    <label class="form-check-label" for="q3_2">4 Good - Tốt (khá rõ ràng, khá tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q3" id="q3_3" value="3" required>
+                    <label class="form-check-label" for="q3_3">3 Fair - Bình thường (nghe được nhưng không tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q3" id="q3_4" value="2" required>
+                    <label class="form-check-label" for="q3_4">2 Not good - Không được tốt (giọng quá nhiều yếu tố nhân tạo)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q3" id="q3_5" value="1" required>
+                    <label class="form-check-label" for="q3_5">1 Very bad - Rất tệ (không thể nghe được, phát âm sai hoặc không rõ ràng)</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="card form-group">
+            <div class="card-header">Question 4: Sáng nay hai mươi chín tháng mười hai, thời tiết miền Bắc rét đậm, rét hại, phổ biến dưới mười ba độ xê, nhiều vùng núi cao dưới năm độ C,</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="audios/scratch/f13a4433c98ef52458e34f1a50e0e1aa.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q4" id="q4_1" value="5" required>
+                    <label class="form-check-label" for="q4_1">5 Excellent - Xuất sắc (rõ ràng, là giọng người thật)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q4" id="q4_2" value="4" required>
+                    <label class="form-check-label" for="q4_2">4 Good - Tốt (khá rõ ràng, khá tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q4" id="q4_3" value="3" required>
+                    <label class="form-check-label" for="q4_3">3 Fair - Bình thường (nghe được nhưng không tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q4" id="q4_4" value="2" required>
+                    <label class="form-check-label" for="q4_4">2 Not good - Không được tốt (giọng quá nhiều yếu tố nhân tạo)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q4" id="q4_5" value="1" required>
+                    <label class="form-check-label" for="q4_5">1 Very bad - Rất tệ (không thể nghe được, phát âm sai hoặc không rõ ràng)</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="card form-group">
+            <div class="card-header">Question 5: Mùa xuân là thời điểm cua huỳnh đế rộ nhất, khoảng từ tháng mười hai đến tháng ba âm lịch.</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="audios/scratch/721cee64870693a20d4255909629a423.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q5" id="q5_1" value="5" required>
+                    <label class="form-check-label" for="q5_1">5 Excellent - Xuất sắc (rõ ràng, là giọng người thật)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q5" id="q5_2" value="4" required>
+                    <label class="form-check-label" for="q5_2">4 Good - Tốt (khá rõ ràng, khá tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q5" id="q5_3" value="3" required>
+                    <label class="form-check-label" for="q5_3">3 Fair - Bình thường (nghe được nhưng không tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q5" id="q5_4" value="2" required>
+                    <label class="form-check-label" for="q5_4">2 Not good - Không được tốt (giọng quá nhiều yếu tố nhân tạo)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q5" id="q5_5" value="1" required>
+                    <label class="form-check-label" for="q5_5">1 Very bad - Rất tệ (không thể nghe được, phát âm sai hoặc không rõ ràng)</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="card form-group">
+            <div class="card-header">Question 6: Điều đó đã cho thấy sức sáng tạo dồi dào và sự chuyên nghiệp của những nghệ sĩ trẻ như Jack và KICM.</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="audios/scratch/d8cb18b4b42fb1ea4c2f83f33a002701.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q6" id="q6_1" value="5" required>
+                    <label class="form-check-label" for="q6_1">5 Excellent - Xuất sắc (rõ ràng, là giọng người thật)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q6" id="q6_2" value="4" required>
+                    <label class="form-check-label" for="q6_2">4 Good - Tốt (khá rõ ràng, khá tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q6" id="q6_3" value="3" required>
+                    <label class="form-check-label" for="q6_3">3 Fair - Bình thường (nghe được nhưng không tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q6" id="q6_4" value="2" required>
+                    <label class="form-check-label" for="q6_4">2 Not good - Không được tốt (giọng quá nhiều yếu tố nhân tạo)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q6" id="q6_5" value="1" required>
+                    <label class="form-check-label" for="q6_5">1 Very bad - Rất tệ (không thể nghe được, phát âm sai hoặc không rõ ràng)</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="card form-group">
+            <div class="card-header">Question 7: Họ có một thành tích ấn tượng khi giành được bốn mươi lăm điểm.</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="audios/scratch/4bce92c2e39787e8afee977c697cc2c4.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q7" id="q7_1" value="5" required>
+                    <label class="form-check-label" for="q7_1">5 Excellent - Xuất sắc (rõ ràng, là giọng người thật)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q7" id="q7_2" value="4" required>
+                    <label class="form-check-label" for="q7_2">4 Good - Tốt (khá rõ ràng, khá tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q7" id="q7_3" value="3" required>
+                    <label class="form-check-label" for="q7_3">3 Fair - Bình thường (nghe được nhưng không tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q7" id="q7_4" value="2" required>
+                    <label class="form-check-label" for="q7_4">2 Not good - Không được tốt (giọng quá nhiều yếu tố nhân tạo)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q7" id="q7_5" value="1" required>
+                    <label class="form-check-label" for="q7_5">1 Very bad - Rất tệ (không thể nghe được, phát âm sai hoặc không rõ ràng)</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="card form-group">
+            <div class="card-header">Question 8: Nhiều bạn đã lựa chọn đi du lịch cùng bạn bè và gia đình.</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="audios/scratch/ac9505931f533d4c5bcad061917aed82.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q8" id="q8_1" value="5" required>
+                    <label class="form-check-label" for="q8_1">5 Excellent - Xuất sắc (rõ ràng, là giọng người thật)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q8" id="q8_2" value="4" required>
+                    <label class="form-check-label" for="q8_2">4 Good - Tốt (khá rõ ràng, khá tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q8" id="q8_3" value="3" required>
+                    <label class="form-check-label" for="q8_3">3 Fair - Bình thường (nghe được nhưng không tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q8" id="q8_4" value="2" required>
+                    <label class="form-check-label" for="q8_4">2 Not good - Không được tốt (giọng quá nhiều yếu tố nhân tạo)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q8" id="q8_5" value="1" required>
+                    <label class="form-check-label" for="q8_5">1 Very bad - Rất tệ (không thể nghe được, phát âm sai hoặc không rõ ràng)</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="card form-group">
+            <div class="card-header">Question 9: Vào mùa nước nổi, nếu bạn đứng từ trên cao nhìn xuống sẽ thấy làng nổi Tân lập giống như một hòn đảo xanh nằm giữa biển nước mênh mông.</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="audios/scratch/787e4867dbca5a5f2ec9c2c7ec05f30b.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q9" id="q9_1" value="5" required>
+                    <label class="form-check-label" for="q9_1">5 Excellent - Xuất sắc (rõ ràng, là giọng người thật)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q9" id="q9_2" value="4" required>
+                    <label class="form-check-label" for="q9_2">4 Good - Tốt (khá rõ ràng, khá tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q9" id="q9_3" value="3" required>
+                    <label class="form-check-label" for="q9_3">3 Fair - Bình thường (nghe được nhưng không tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q9" id="q9_4" value="2" required>
+                    <label class="form-check-label" for="q9_4">2 Not good - Không được tốt (giọng quá nhiều yếu tố nhân tạo)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q9" id="q9_5" value="1" required>
+                    <label class="form-check-label" for="q9_5">1 Very bad - Rất tệ (không thể nghe được, phát âm sai hoặc không rõ ràng)</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="card form-group">
+            <div class="card-header">Question 10: Tại Hoa Kỳ, Girls Like You đạt vị trí số một trên bảng xếp hạng Billboard Hot one hundred trong bảy tuần liên tiếp,</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="audios/scratch/022be0f4abcd7e617a7554ae32bb1e7d.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q10" id="q10_1" value="5" required>
+                    <label class="form-check-label" for="q10_1">5 Excellent - Xuất sắc (rõ ràng, là giọng người thật)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q10" id="q10_2" value="4" required>
+                    <label class="form-check-label" for="q10_2">4 Good - Tốt (khá rõ ràng, khá tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q10" id="q10_3" value="3" required>
+                    <label class="form-check-label" for="q10_3">3 Fair - Bình thường (nghe được nhưng không tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q10" id="q10_4" value="2" required>
+                    <label class="form-check-label" for="q10_4">2 Not good - Không được tốt (giọng quá nhiều yếu tố nhân tạo)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q10" id="q10_5" value="1" required>
+                    <label class="form-check-label" for="q10_5">1 Very bad - Rất tệ (không thể nghe được, phát âm sai hoặc không rõ ràng)</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="card form-group">
+            <div class="card-header">Question 11: Bettencourt mô tả nó như một lời cảnh báo rằng, cụm từ đang trở nên vô nghĩa</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="audios/scratch/9a3ee2954d3729ae0af336c200fa08a6.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q11" id="q11_1" value="5" required>
+                    <label class="form-check-label" for="q11_1">5 Excellent - Xuất sắc (rõ ràng, là giọng người thật)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q11" id="q11_2" value="4" required>
+                    <label class="form-check-label" for="q11_2">4 Good - Tốt (khá rõ ràng, khá tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q11" id="q11_3" value="3" required>
+                    <label class="form-check-label" for="q11_3">3 Fair - Bình thường (nghe được nhưng không tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q11" id="q11_4" value="2" required>
+                    <label class="form-check-label" for="q11_4">2 Not good - Không được tốt (giọng quá nhiều yếu tố nhân tạo)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q11" id="q11_5" value="1" required>
+                    <label class="form-check-label" for="q11_5">1 Very bad - Rất tệ (không thể nghe được, phát âm sai hoặc không rõ ràng)</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="card form-group">
+            <div class="card-header">Question 12: Bạch Tuyết, sinh năm một nghìn chín trăm bốn mươi lăm, là một nữ nghệ sĩ cải lương danh tiếng, được mệnh danh là Cải lương chi bảo.</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="audios/scratch/470c823a6905a2518997e9fe5c78f1fe.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q12" id="q12_1" value="5" required>
+                    <label class="form-check-label" for="q12_1">5 Excellent - Xuất sắc (rõ ràng, là giọng người thật)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q12" id="q12_2" value="4" required>
+                    <label class="form-check-label" for="q12_2">4 Good - Tốt (khá rõ ràng, khá tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q12" id="q12_3" value="3" required>
+                    <label class="form-check-label" for="q12_3">3 Fair - Bình thường (nghe được nhưng không tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q12" id="q12_4" value="2" required>
+                    <label class="form-check-label" for="q12_4">2 Not good - Không được tốt (giọng quá nhiều yếu tố nhân tạo)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q12" id="q12_5" value="1" required>
+                    <label class="form-check-label" for="q12_5">1 Very bad - Rất tệ (không thể nghe được, phát âm sai hoặc không rõ ràng)</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="card form-group">
+            <div class="card-header">Question 13: Đây là khu chợ có lịch sử lâu đời, quy tụ những gian hàng với các món ăn đặc sản của Trung Quốc như bánh mì ngũ vị, bánh hấp và nhiều món khác.</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="audios/scratch/8d1385a033149cde22250a29b4e31519.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q13" id="q13_1" value="5" required>
+                    <label class="form-check-label" for="q13_1">5 Excellent - Xuất sắc (rõ ràng, là giọng người thật)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q13" id="q13_2" value="4" required>
+                    <label class="form-check-label" for="q13_2">4 Good - Tốt (khá rõ ràng, khá tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q13" id="q13_3" value="3" required>
+                    <label class="form-check-label" for="q13_3">3 Fair - Bình thường (nghe được nhưng không tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q13" id="q13_4" value="2" required>
+                    <label class="form-check-label" for="q13_4">2 Not good - Không được tốt (giọng quá nhiều yếu tố nhân tạo)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q13" id="q13_5" value="1" required>
+                    <label class="form-check-label" for="q13_5">1 Very bad - Rất tệ (không thể nghe được, phát âm sai hoặc không rõ ràng)</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="card form-group">
+            <div class="card-header">Question 14: MV đa dạng sắc màu, hơi hướng truyền thống, những nét đẹp về phong tục của xứ sở kim chi được mang ra thể hiện đậm nét.</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="audios/scratch/eefb29319e2b8890679f36dee3ac6ce8.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q14" id="q14_1" value="5" required>
+                    <label class="form-check-label" for="q14_1">5 Excellent - Xuất sắc (rõ ràng, là giọng người thật)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q14" id="q14_2" value="4" required>
+                    <label class="form-check-label" for="q14_2">4 Good - Tốt (khá rõ ràng, khá tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q14" id="q14_3" value="3" required>
+                    <label class="form-check-label" for="q14_3">3 Fair - Bình thường (nghe được nhưng không tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q14" id="q14_4" value="2" required>
+                    <label class="form-check-label" for="q14_4">2 Not good - Không được tốt (giọng quá nhiều yếu tố nhân tạo)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q14" id="q14_5" value="1" required>
+                    <label class="form-check-label" for="q14_5">1 Very bad - Rất tệ (không thể nghe được, phát âm sai hoặc không rõ ràng)</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="card form-group">
+            <div class="card-header">Question 15: Tuy nhiên nếu bạn đi cùng một nhóm thì giá cả cũng sẽ giảm bớt đi phần nào.</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="audios/scratch/d3ad4609ff6577b86329b3bc5084a7cc.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q15" id="q15_1" value="5" required>
+                    <label class="form-check-label" for="q15_1">5 Excellent - Xuất sắc (rõ ràng, là giọng người thật)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q15" id="q15_2" value="4" required>
+                    <label class="form-check-label" for="q15_2">4 Good - Tốt (khá rõ ràng, khá tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q15" id="q15_3" value="3" required>
+                    <label class="form-check-label" for="q15_3">3 Fair - Bình thường (nghe được nhưng không tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q15" id="q15_4" value="2" required>
+                    <label class="form-check-label" for="q15_4">2 Not good - Không được tốt (giọng quá nhiều yếu tố nhân tạo)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q15" id="q15_5" value="1" required>
+                    <label class="form-check-label" for="q15_5">1 Very bad - Rất tệ (không thể nghe được, phát âm sai hoặc không rõ ràng)</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="card form-group">
+            <div class="card-header">Question 16: Đến với Mưa tháng sáu, mọi thứ đã có sự thay đổi, không còn quen thuộc như vậy nữa.</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="audios/scratch/31353dbae08caa4e4704738090ab3f3d.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q16" id="q16_1" value="5" required>
+                    <label class="form-check-label" for="q16_1">5 Excellent - Xuất sắc (rõ ràng, là giọng người thật)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q16" id="q16_2" value="4" required>
+                    <label class="form-check-label" for="q16_2">4 Good - Tốt (khá rõ ràng, khá tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q16" id="q16_3" value="3" required>
+                    <label class="form-check-label" for="q16_3">3 Fair - Bình thường (nghe được nhưng không tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q16" id="q16_4" value="2" required>
+                    <label class="form-check-label" for="q16_4">2 Not good - Không được tốt (giọng quá nhiều yếu tố nhân tạo)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q16" id="q16_5" value="1" required>
+                    <label class="form-check-label" for="q16_5">1 Very bad - Rất tệ (không thể nghe được, phát âm sai hoặc không rõ ràng)</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="card form-group">
+            <div class="card-header">Question 17: Do đó, nếu thấy nghi ngờ, nên khôi phục cài đặt gốc trên điện thoại, cập nhật hệ điều hành mới nhất.</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="audios/scratch/1ca356d43aea5a207dd5eda8047fdbbd.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q17" id="q17_1" value="5" required>
+                    <label class="form-check-label" for="q17_1">5 Excellent - Xuất sắc (rõ ràng, là giọng người thật)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q17" id="q17_2" value="4" required>
+                    <label class="form-check-label" for="q17_2">4 Good - Tốt (khá rõ ràng, khá tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q17" id="q17_3" value="3" required>
+                    <label class="form-check-label" for="q17_3">3 Fair - Bình thường (nghe được nhưng không tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q17" id="q17_4" value="2" required>
+                    <label class="form-check-label" for="q17_4">2 Not good - Không được tốt (giọng quá nhiều yếu tố nhân tạo)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q17" id="q17_5" value="1" required>
+                    <label class="form-check-label" for="q17_5">1 Very bad - Rất tệ (không thể nghe được, phát âm sai hoặc không rõ ràng)</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="card form-group">
+            <div class="card-header">Question 18: Hệ thống Smart Sound của BKAV, người sử dụng có thể điều khiển hệ thống âm thanh trong toàn bộ căn nhà một cách tập trung mà vẫn giữa được tính riêng tư cho từng khu vực.</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="audios/scratch/ed7e252ea9a16e8a3074d085871a801b.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q18" id="q18_1" value="5" required>
+                    <label class="form-check-label" for="q18_1">5 Excellent - Xuất sắc (rõ ràng, là giọng người thật)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q18" id="q18_2" value="4" required>
+                    <label class="form-check-label" for="q18_2">4 Good - Tốt (khá rõ ràng, khá tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q18" id="q18_3" value="3" required>
+                    <label class="form-check-label" for="q18_3">3 Fair - Bình thường (nghe được nhưng không tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q18" id="q18_4" value="2" required>
+                    <label class="form-check-label" for="q18_4">2 Not good - Không được tốt (giọng quá nhiều yếu tố nhân tạo)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q18" id="q18_5" value="1" required>
+                    <label class="form-check-label" for="q18_5">1 Very bad - Rất tệ (không thể nghe được, phát âm sai hoặc không rõ ràng)</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="card form-group">
+            <div class="card-header">Question 19: Dù ở nhà, cơ quan hay đi du lịch, ở trong nước hay nước ngoài, người dùng có thể kiểm soát ngôi nhà thông qua thiết bị kết nối Internet.</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="audios/scratch/b3092f570a4fa4ac282d40232447abce.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q19" id="q19_1" value="5" required>
+                    <label class="form-check-label" for="q19_1">5 Excellent - Xuất sắc (rõ ràng, là giọng người thật)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q19" id="q19_2" value="4" required>
+                    <label class="form-check-label" for="q19_2">4 Good - Tốt (khá rõ ràng, khá tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q19" id="q19_3" value="3" required>
+                    <label class="form-check-label" for="q19_3">3 Fair - Bình thường (nghe được nhưng không tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q19" id="q19_4" value="2" required>
+                    <label class="form-check-label" for="q19_4">2 Not good - Không được tốt (giọng quá nhiều yếu tố nhân tạo)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q19" id="q19_5" value="1" required>
+                    <label class="form-check-label" for="q19_5">1 Very bad - Rất tệ (không thể nghe được, phát âm sai hoặc không rõ ràng)</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="card form-group">
+            <div class="card-header">Question 20: Đây là hai sản phẩm chiến lược do Công ty Cổ phần Viễn thông FPT, FPT Telecom, phát triển và đang được đầu tư mạnh.</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="audios/scratch/9c04d2b4d944279f1290c55ed2cc4b40.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q20" id="q20_1" value="5" required>
+                    <label class="form-check-label" for="q20_1">5 Excellent - Xuất sắc (rõ ràng, là giọng người thật)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q20" id="q20_2" value="4" required>
+                    <label class="form-check-label" for="q20_2">4 Good - Tốt (khá rõ ràng, khá tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q20" id="q20_3" value="3" required>
+                    <label class="form-check-label" for="q20_3">3 Fair - Bình thường (nghe được nhưng không tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q20" id="q20_4" value="2" required>
+                    <label class="form-check-label" for="q20_4">2 Not good - Không được tốt (giọng quá nhiều yếu tố nhân tạo)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q20" id="q20_5" value="1" required>
+                    <label class="form-check-label" for="q20_5">1 Very bad - Rất tệ (không thể nghe được, phát âm sai hoặc không rõ ràng)</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="card form-group">
+            <div class="card-header">Question 21 : Đây là một lợi thế của Vinhomes Grand Park khi phân khu này đã bàn giao và đi vào vận hành, giúp khách hàng có thể ở ngay hoặc cho thuê.</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="audios/GT/7e2d61c6733a679b9ddf350586cde68b.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q21" id="q21_1" value="5" required>
+                    <label class="form-check-label" for="q21_1">5 Excellent - Xuất sắc (rõ ràng, là giọng người thật)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q21" id="q21_2" value="4" required>
+                    <label class="form-check-label" for="q21_2">4 Good - Tốt (khá rõ ràng, khá tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q21" id="q21_3" value="3" required>
+                    <label class="form-check-label" for="q21_3">3 Fair - Bình thường (nghe được nhưng không tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q21" id="q21_4" value="2" required>
+                    <label class="form-check-label" for="q21_4">2 Not good - Không được tốt (giọng quá nhiều yếu tố nhân tạo)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q21" id="q21_5" value="1" required>
+                    <label class="form-check-label" for="q21_5">1 Very bad - Rất tệ (không thể nghe được, phát âm sai hoặc không rõ ràng)</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="card form-group">
+            <div class="card-header">Question 22 : Quá trình nâng lãi của Fed hơn một năm qua đã gây sức ép lên kim loại quý, do công cụ này không trả lãi cố định.</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="audios/GT/bdabb86272c13b632a88bfd7802aa6fd.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q22" id="q22_1" value="5" required>
+                    <label class="form-check-label" for="q22_1">5 Excellent - Xuất sắc (rõ ràng, là giọng người thật)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q22" id="q22_2" value="4" required>
+                    <label class="form-check-label" for="q22_2">4 Good - Tốt (khá rõ ràng, khá tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q22" id="q22_3" value="3" required>
+                    <label class="form-check-label" for="q22_3">3 Fair - Bình thường (nghe được nhưng không tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q22" id="q22_4" value="2" required>
+                    <label class="form-check-label" for="q22_4">2 Not good - Không được tốt (giọng quá nhiều yếu tố nhân tạo)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q22" id="q22_5" value="1" required>
+                    <label class="form-check-label" for="q22_5">1 Very bad - Rất tệ (không thể nghe được, phát âm sai hoặc không rõ ràng)</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="card form-group">
+            <div class="card-header">Question 23 : Đối với từng quyền lợi bảo hiểm, công ty bảo hiểm lại quy định các loại giấy tờ khác nhau, được công khai trên website của doanh nghiệp.</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="audios/GT/98e53847ce025696271aca9d2fb0aae3.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q23" id="q23_1" value="5" required>
+                    <label class="form-check-label" for="q23_1">5 Excellent - Xuất sắc (rõ ràng, là giọng người thật)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q23" id="q23_2" value="4" required>
+                    <label class="form-check-label" for="q23_2">4 Good - Tốt (khá rõ ràng, khá tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q23" id="q23_3" value="3" required>
+                    <label class="form-check-label" for="q23_3">3 Fair - Bình thường (nghe được nhưng không tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q23" id="q23_4" value="2" required>
+                    <label class="form-check-label" for="q23_4">2 Not good - Không được tốt (giọng quá nhiều yếu tố nhân tạo)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q23" id="q23_5" value="1" required>
+                    <label class="form-check-label" for="q23_5">1 Very bad - Rất tệ (không thể nghe được, phát âm sai hoặc không rõ ràng)</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="card form-group">
+            <div class="card-header">Question 24 : Sáng nay hai mươi chín tháng mười hai, thời tiết miền Bắc rét đậm, rét hại, phổ biến dưới mười ba độ xê, nhiều vùng núi cao dưới năm độ C,</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="audios/GT/aa6c42718843e77a1c4903c350457871.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q24" id="q24_1" value="5" required>
+                    <label class="form-check-label" for="q24_1">5 Excellent - Xuất sắc (rõ ràng, là giọng người thật)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q24" id="q24_2" value="4" required>
+                    <label class="form-check-label" for="q24_2">4 Good - Tốt (khá rõ ràng, khá tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q24" id="q24_3" value="3" required>
+                    <label class="form-check-label" for="q24_3">3 Fair - Bình thường (nghe được nhưng không tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q24" id="q24_4" value="2" required>
+                    <label class="form-check-label" for="q24_4">2 Not good - Không được tốt (giọng quá nhiều yếu tố nhân tạo)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q24" id="q24_5" value="1" required>
+                    <label class="form-check-label" for="q24_5">1 Very bad - Rất tệ (không thể nghe được, phát âm sai hoặc không rõ ràng)</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="card form-group">
+            <div class="card-header">Question 25 : Mùa xuân là thời điểm cua huỳnh đế rộ nhất, khoảng từ tháng mười hai đến tháng ba âm lịch.</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="audios/GT/6d17dfd3fc89dbfe35d0122533490f81.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q25" id="q25_1" value="5" required>
+                    <label class="form-check-label" for="q25_1">5 Excellent - Xuất sắc (rõ ràng, là giọng người thật)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q25" id="q25_2" value="4" required>
+                    <label class="form-check-label" for="q25_2">4 Good - Tốt (khá rõ ràng, khá tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q25" id="q25_3" value="3" required>
+                    <label class="form-check-label" for="q25_3">3 Fair - Bình thường (nghe được nhưng không tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q25" id="q25_4" value="2" required>
+                    <label class="form-check-label" for="q25_4">2 Not good - Không được tốt (giọng quá nhiều yếu tố nhân tạo)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q25" id="q25_5" value="1" required>
+                    <label class="form-check-label" for="q25_5">1 Very bad - Rất tệ (không thể nghe được, phát âm sai hoặc không rõ ràng)</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="card form-group">
+            <div class="card-header">Question 26 : Điều đó đã cho thấy sức sáng tạo dồi dào và sự chuyên nghiệp của những nghệ sĩ trẻ như Jack và KICM.</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="audios/GT/60d0f758740a56a564d8c67f626c2744.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q26" id="q26_1" value="5" required>
+                    <label class="form-check-label" for="q26_1">5 Excellent - Xuất sắc (rõ ràng, là giọng người thật)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q26" id="q26_2" value="4" required>
+                    <label class="form-check-label" for="q26_2">4 Good - Tốt (khá rõ ràng, khá tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q26" id="q26_3" value="3" required>
+                    <label class="form-check-label" for="q26_3">3 Fair - Bình thường (nghe được nhưng không tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q26" id="q26_4" value="2" required>
+                    <label class="form-check-label" for="q26_4">2 Not good - Không được tốt (giọng quá nhiều yếu tố nhân tạo)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q26" id="q26_5" value="1" required>
+                    <label class="form-check-label" for="q26_5">1 Very bad - Rất tệ (không thể nghe được, phát âm sai hoặc không rõ ràng)</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="card form-group">
+            <div class="card-header">Question 27 : Họ có một thành tích ấn tượng khi giành được bốn mươi lăm điểm.</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="audios/GT/54b0981d527e9997d7c069b323755323.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q27" id="q27_1" value="5" required>
+                    <label class="form-check-label" for="q27_1">5 Excellent - Xuất sắc (rõ ràng, là giọng người thật)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q27" id="q27_2" value="4" required>
+                    <label class="form-check-label" for="q27_2">4 Good - Tốt (khá rõ ràng, khá tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q27" id="q27_3" value="3" required>
+                    <label class="form-check-label" for="q27_3">3 Fair - Bình thường (nghe được nhưng không tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q27" id="q27_4" value="2" required>
+                    <label class="form-check-label" for="q27_4">2 Not good - Không được tốt (giọng quá nhiều yếu tố nhân tạo)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q27" id="q27_5" value="1" required>
+                    <label class="form-check-label" for="q27_5">1 Very bad - Rất tệ (không thể nghe được, phát âm sai hoặc không rõ ràng)</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="card form-group">
+            <div class="card-header">Question 28 : Nhiều bạn đã lựa chọn đi du lịch cùng bạn bè và gia đình.</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="audios/GT/b5d85f57307aa8689442631c8f07837a.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q28" id="q28_1" value="5" required>
+                    <label class="form-check-label" for="q28_1">5 Excellent - Xuất sắc (rõ ràng, là giọng người thật)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q28" id="q28_2" value="4" required>
+                    <label class="form-check-label" for="q28_2">4 Good - Tốt (khá rõ ràng, khá tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q28" id="q28_3" value="3" required>
+                    <label class="form-check-label" for="q28_3">3 Fair - Bình thường (nghe được nhưng không tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q28" id="q28_4" value="2" required>
+                    <label class="form-check-label" for="q28_4">2 Not good - Không được tốt (giọng quá nhiều yếu tố nhân tạo)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q28" id="q28_5" value="1" required>
+                    <label class="form-check-label" for="q28_5">1 Very bad - Rất tệ (không thể nghe được, phát âm sai hoặc không rõ ràng)</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="card form-group">
+            <div class="card-header">Question 29 : Vào mùa nước nổi, nếu bạn đứng từ trên cao nhìn xuống sẽ thấy làng nổi Tân lập giống như một hòn đảo xanh nằm giữa biển nước mênh mông.</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="audios/GT/c360a32716991e967926769035deec2b.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q29" id="q29_1" value="5" required>
+                    <label class="form-check-label" for="q29_1">5 Excellent - Xuất sắc (rõ ràng, là giọng người thật)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q29" id="q29_2" value="4" required>
+                    <label class="form-check-label" for="q29_2">4 Good - Tốt (khá rõ ràng, khá tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q29" id="q29_3" value="3" required>
+                    <label class="form-check-label" for="q29_3">3 Fair - Bình thường (nghe được nhưng không tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q29" id="q29_4" value="2" required>
+                    <label class="form-check-label" for="q29_4">2 Not good - Không được tốt (giọng quá nhiều yếu tố nhân tạo)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q29" id="q29_5" value="1" required>
+                    <label class="form-check-label" for="q29_5">1 Very bad - Rất tệ (không thể nghe được, phát âm sai hoặc không rõ ràng)</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="card form-group">
+            <div class="card-header">Question 30 : Tại Hoa Kỳ, Girls Like You đạt vị trí số một trên bảng xếp hạng Billboard Hot one hundred trong bảy tuần liên tiếp,</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="audios/GT/354b33c2b5037b3ee0df63889cfe6636.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q30" id="q30_1" value="5" required>
+                    <label class="form-check-label" for="q30_1">5 Excellent - Xuất sắc (rõ ràng, là giọng người thật)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q30" id="q30_2" value="4" required>
+                    <label class="form-check-label" for="q30_2">4 Good - Tốt (khá rõ ràng, khá tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q30" id="q30_3" value="3" required>
+                    <label class="form-check-label" for="q30_3">3 Fair - Bình thường (nghe được nhưng không tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q30" id="q30_4" value="2" required>
+                    <label class="form-check-label" for="q30_4">2 Not good - Không được tốt (giọng quá nhiều yếu tố nhân tạo)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q30" id="q30_5" value="1" required>
+                    <label class="form-check-label" for="q30_5">1 Very bad - Rất tệ (không thể nghe được, phát âm sai hoặc không rõ ràng)</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="card form-group">
+            <div class="card-header">Question 31 : Bettencourt mô tả nó như một lời cảnh báo rằng, cụm từ đang trở nên vô nghĩa</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="audios/GT/b39efd35fbec229706cea7a72c337d1c.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q31" id="q31_1" value="5" required>
+                    <label class="form-check-label" for="q31_1">5 Excellent - Xuất sắc (rõ ràng, là giọng người thật)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q31" id="q31_2" value="4" required>
+                    <label class="form-check-label" for="q31_2">4 Good - Tốt (khá rõ ràng, khá tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q31" id="q31_3" value="3" required>
+                    <label class="form-check-label" for="q31_3">3 Fair - Bình thường (nghe được nhưng không tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q31" id="q31_4" value="2" required>
+                    <label class="form-check-label" for="q31_4">2 Not good - Không được tốt (giọng quá nhiều yếu tố nhân tạo)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q31" id="q31_5" value="1" required>
+                    <label class="form-check-label" for="q31_5">1 Very bad - Rất tệ (không thể nghe được, phát âm sai hoặc không rõ ràng)</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="card form-group">
+            <div class="card-header">Question 32 : Bạch Tuyết, sinh năm một nghìn chín trăm bốn mươi lăm, là một nữ nghệ sĩ cải lương danh tiếng, được mệnh danh là Cải lương chi bảo.</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="audios/GT/74e2addd48805b79db348119f213e4d3.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q32" id="q32_1" value="5" required>
+                    <label class="form-check-label" for="q32_1">5 Excellent - Xuất sắc (rõ ràng, là giọng người thật)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q32" id="q32_2" value="4" required>
+                    <label class="form-check-label" for="q32_2">4 Good - Tốt (khá rõ ràng, khá tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q32" id="q32_3" value="3" required>
+                    <label class="form-check-label" for="q32_3">3 Fair - Bình thường (nghe được nhưng không tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q32" id="q32_4" value="2" required>
+                    <label class="form-check-label" for="q32_4">2 Not good - Không được tốt (giọng quá nhiều yếu tố nhân tạo)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q32" id="q32_5" value="1" required>
+                    <label class="form-check-label" for="q32_5">1 Very bad - Rất tệ (không thể nghe được, phát âm sai hoặc không rõ ràng)</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="card form-group">
+            <div class="card-header">Question 33 : Đây là khu chợ có lịch sử lâu đời, quy tụ những gian hàng với các món ăn đặc sản của Trung Quốc như bánh mì ngũ vị, bánh hấp và nhiều món khác.</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="audios/GT/8080bbca7363e6adc2a3c069b55eb02d.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q33" id="q33_1" value="5" required>
+                    <label class="form-check-label" for="q33_1">5 Excellent - Xuất sắc (rõ ràng, là giọng người thật)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q33" id="q33_2" value="4" required>
+                    <label class="form-check-label" for="q33_2">4 Good - Tốt (khá rõ ràng, khá tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q33" id="q33_3" value="3" required>
+                    <label class="form-check-label" for="q33_3">3 Fair - Bình thường (nghe được nhưng không tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q33" id="q33_4" value="2" required>
+                    <label class="form-check-label" for="q33_4">2 Not good - Không được tốt (giọng quá nhiều yếu tố nhân tạo)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q33" id="q33_5" value="1" required>
+                    <label class="form-check-label" for="q33_5">1 Very bad - Rất tệ (không thể nghe được, phát âm sai hoặc không rõ ràng)</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="card form-group">
+            <div class="card-header">Question 34 : MV đa dạng sắc màu, hơi hướng truyền thống, những nét đẹp về phong tục của xứ sở kim chi được mang ra thể hiện đậm nét.</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="audios/GT/b7be3f33fa30353c1c7a540d6d1bd219.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q34" id="q34_1" value="5" required>
+                    <label class="form-check-label" for="q34_1">5 Excellent - Xuất sắc (rõ ràng, là giọng người thật)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q34" id="q34_2" value="4" required>
+                    <label class="form-check-label" for="q34_2">4 Good - Tốt (khá rõ ràng, khá tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q34" id="q34_3" value="3" required>
+                    <label class="form-check-label" for="q34_3">3 Fair - Bình thường (nghe được nhưng không tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q34" id="q34_4" value="2" required>
+                    <label class="form-check-label" for="q34_4">2 Not good - Không được tốt (giọng quá nhiều yếu tố nhân tạo)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q34" id="q34_5" value="1" required>
+                    <label class="form-check-label" for="q34_5">1 Very bad - Rất tệ (không thể nghe được, phát âm sai hoặc không rõ ràng)</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="card form-group">
+            <div class="card-header">Question 35 : Tuy nhiên nếu bạn đi cùng một nhóm thì giá cả cũng sẽ giảm bớt đi phần nào.</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="audios/GT/b680a47543edd9014bd66f40cbe6bf63.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q35" id="q35_1" value="5" required>
+                    <label class="form-check-label" for="q35_1">5 Excellent - Xuất sắc (rõ ràng, là giọng người thật)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q35" id="q35_2" value="4" required>
+                    <label class="form-check-label" for="q35_2">4 Good - Tốt (khá rõ ràng, khá tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q35" id="q35_3" value="3" required>
+                    <label class="form-check-label" for="q35_3">3 Fair - Bình thường (nghe được nhưng không tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q35" id="q35_4" value="2" required>
+                    <label class="form-check-label" for="q35_4">2 Not good - Không được tốt (giọng quá nhiều yếu tố nhân tạo)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q35" id="q35_5" value="1" required>
+                    <label class="form-check-label" for="q35_5">1 Very bad - Rất tệ (không thể nghe được, phát âm sai hoặc không rõ ràng)</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="card form-group">
+            <div class="card-header">Question 36 : Đến với Mưa tháng sáu, mọi thứ đã có sự thay đổi, không còn quen thuộc như vậy nữa.</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="audios/GT/8fc0498afc1fdaae2940fcec090890ee.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q36" id="q36_1" value="5" required>
+                    <label class="form-check-label" for="q36_1">5 Excellent - Xuất sắc (rõ ràng, là giọng người thật)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q36" id="q36_2" value="4" required>
+                    <label class="form-check-label" for="q36_2">4 Good - Tốt (khá rõ ràng, khá tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q36" id="q36_3" value="3" required>
+                    <label class="form-check-label" for="q36_3">3 Fair - Bình thường (nghe được nhưng không tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q36" id="q36_4" value="2" required>
+                    <label class="form-check-label" for="q36_4">2 Not good - Không được tốt (giọng quá nhiều yếu tố nhân tạo)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q36" id="q36_5" value="1" required>
+                    <label class="form-check-label" for="q36_5">1 Very bad - Rất tệ (không thể nghe được, phát âm sai hoặc không rõ ràng)</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="card form-group">
+            <div class="card-header">Question 37 : Do đó, nếu thấy nghi ngờ, nên khôi phục cài đặt gốc trên điện thoại, cập nhật hệ điều hành mới nhất.</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="audios/GT/52df6819d4a6f1d63ecb0ef37b18108c.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q37" id="q37_1" value="5" required>
+                    <label class="form-check-label" for="q37_1">5 Excellent - Xuất sắc (rõ ràng, là giọng người thật)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q37" id="q37_2" value="4" required>
+                    <label class="form-check-label" for="q37_2">4 Good - Tốt (khá rõ ràng, khá tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q37" id="q37_3" value="3" required>
+                    <label class="form-check-label" for="q37_3">3 Fair - Bình thường (nghe được nhưng không tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q37" id="q37_4" value="2" required>
+                    <label class="form-check-label" for="q37_4">2 Not good - Không được tốt (giọng quá nhiều yếu tố nhân tạo)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q37" id="q37_5" value="1" required>
+                    <label class="form-check-label" for="q37_5">1 Very bad - Rất tệ (không thể nghe được, phát âm sai hoặc không rõ ràng)</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="card form-group">
+            <div class="card-header">Question 38 : Hệ thống Smart Sound của BKAV, người sử dụng có thể điều khiển hệ thống âm thanh trong toàn bộ căn nhà một cách tập trung mà vẫn giữa được tính riêng tư cho từng khu vực.</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="audios/GT/762db1b941afbd0f389cc12d9cbd2d79.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q38" id="q38_1" value="5" required>
+                    <label class="form-check-label" for="q38_1">5 Excellent - Xuất sắc (rõ ràng, là giọng người thật)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q38" id="q38_2" value="4" required>
+                    <label class="form-check-label" for="q38_2">4 Good - Tốt (khá rõ ràng, khá tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q38" id="q38_3" value="3" required>
+                    <label class="form-check-label" for="q38_3">3 Fair - Bình thường (nghe được nhưng không tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q38" id="q38_4" value="2" required>
+                    <label class="form-check-label" for="q38_4">2 Not good - Không được tốt (giọng quá nhiều yếu tố nhân tạo)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q38" id="q38_5" value="1" required>
+                    <label class="form-check-label" for="q38_5">1 Very bad - Rất tệ (không thể nghe được, phát âm sai hoặc không rõ ràng)</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="card form-group">
+            <div class="card-header">Question 39 : Dù ở nhà, cơ quan hay đi du lịch, ở trong nước hay nước ngoài, người dùng có thể kiểm soát ngôi nhà thông qua thiết bị kết nối Internet.</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="audios/GT/9321e9d4a62fdb3081a162da1364c3a7.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q39" id="q39_1" value="5" required>
+                    <label class="form-check-label" for="q39_1">5 Excellent - Xuất sắc (rõ ràng, là giọng người thật)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q39" id="q39_2" value="4" required>
+                    <label class="form-check-label" for="q39_2">4 Good - Tốt (khá rõ ràng, khá tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q39" id="q39_3" value="3" required>
+                    <label class="form-check-label" for="q39_3">3 Fair - Bình thường (nghe được nhưng không tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q39" id="q39_4" value="2" required>
+                    <label class="form-check-label" for="q39_4">2 Not good - Không được tốt (giọng quá nhiều yếu tố nhân tạo)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q39" id="q39_5" value="1" required>
+                    <label class="form-check-label" for="q39_5">1 Very bad - Rất tệ (không thể nghe được, phát âm sai hoặc không rõ ràng)</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="card form-group">
+            <div class="card-header">Question 40 : Đây là hai sản phẩm chiến lược do Công ty Cổ phần Viễn thông FPT, FPT Telecom, phát triển và đang được đầu tư mạnh.</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="audios/GT/47506870f6cf1feab9d52b6dea79fc1e.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q40" id="q40_1" value="5" required>
+                    <label class="form-check-label" for="q40_1">5 Excellent - Xuất sắc (rõ ràng, là giọng người thật)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q40" id="q40_2" value="4" required>
+                    <label class="form-check-label" for="q40_2">4 Good - Tốt (khá rõ ràng, khá tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q40" id="q40_3" value="3" required>
+                    <label class="form-check-label" for="q40_3">3 Fair - Bình thường (nghe được nhưng không tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q40" id="q40_4" value="2" required>
+                    <label class="form-check-label" for="q40_4">2 Not good - Không được tốt (giọng quá nhiều yếu tố nhân tạo)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q40" id="q40_5" value="1" required>
+                    <label class="form-check-label" for="q40_5">1 Very bad - Rất tệ (không thể nghe được, phát âm sai hoặc không rõ ràng)</label>
+                </div>
+            </div>
+        </div>
+
+
+            <input type="text" name="formid" value="1" hidden>
+            <input type="text" name="thank" value="Cảm ơn bạn một lần nữa vì đã tham gia thử nghiệm này!" hidden>
+            <input class="btn btn-info btn-lg" type="submit" value="Submit results" id="submitBtn">
+            <p class="text-muted">
+
+            </p>
+        </form>
+    </div>
+
+    <div class="container" style="padding-top: 60px;">
+        <p class="text-center text-muted"></p>
+    </div>
+
+    <script type="text/javascript">
+        function preventRepeatedSubmission() {
+            document.getElementById('submitBtn').disabled = true;
+            setTimeout("submitBtn.disabled=false;", 5000);
+            return true;
+        };
+        function randomQuestions() {
+            questions_array = Array.from(document.getElementById("theForm").querySelectorAll(".form-group")).slice(2);
+            questions_array.forEach(function test(item){item.remove()});
+            questions_array = questions_array.sort((a, b) => 0.5 - Math.random());
+            questions_array.forEach(function test(item){document.getElementById("theForm").insertBefore(item, document.getElementById("submitBtn"))});
+            return True;
+        }
+    </script>
+</body>
+
+</html>

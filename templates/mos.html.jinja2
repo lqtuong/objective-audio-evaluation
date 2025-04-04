@@ -1,0 +1,61 @@
+{% extends "base.html.jinja2" %}
+{% block heading %}
+    <h1 class="display-4">Độ đo Mean Opinion Score (MOS)</h1>
+    <p class="lead">Đánh giá độ tự nhiên và thông minh của hệ thống TTS</p>
+    <hr class="my-4">
+    <p>
+        Cảm ơn bạn vì đã tham gia bài khảo sát này!
+    </p>
+    <p>
+        ---
+    </p>
+    <p>
+        Trong thí nghiệm này, chúng tôi sử dụng máy tính để tổng hợp giọng nói của con người.
+        Các tệp âm thanh sau đây chứa các bản ghi âm thật và giọng nói tổng hợp, và mỗi câu được kèm theo một bản ghi.
+        Các đối tượng được yêu cầu nghe bằng tai nghe và cho điểm theo thang sau đây dựa trên cảm nhận về của từng tệp âm thanh:
+        <ul>
+            <li>1 Very bad - Rất tệ (không thể nghe được, phát âm sai hoặc không rõ ràng toàn bộ câu nói)</li>
+            <li>2 Not good - Không được tốt (giọng quá nhiều yếu tố nhân tạo, giống robot)</li>
+            <li>3 Fair - Bình thường (nghe được nhưng không tự nhiên)</li>
+            <li>4 Good - Tốt (khá rõ ràng, khá tự nhiên)</li>
+            <li>5 Excellent - Xuất sắc (rõ ràng, là giọng người thật)</li>
+        </ul>
+    </p>
+    <p>
+        <b>Thứ tự các câu hỏi sau đây được sinh một cách ngẫu nhiên. Xin hãy làm lại từ đầu trong trường hợp bạn phải reload lại trang này!</b>
+    </p>
+{% endblock %}
+{% block form_questions %}
+    {% for question in questions %} 
+        <div class="card form-group">
+            <div class="card-header">{{ question.title }}</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="{{ question.audio_path }}">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="{{ question.name }}" id="{{ question.name }}_1" value="5" required>
+                    <label class="form-check-label" for="{{ question.name }}_1">5 Excellent - Xuất sắc (rõ ràng, là giọng người thật)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="{{ question.name }}" id="{{ question.name }}_2" value="4" required>
+                    <label class="form-check-label" for="{{ question.name }}_2">4 Good - Tốt (khá rõ ràng, khá tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="{{ question.name }}" id="{{ question.name }}_3" value="3" required>
+                    <label class="form-check-label" for="{{ question.name }}_3">3 Fair - Bình thường (nghe được nhưng không tự nhiên)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="{{ question.name }}" id="{{ question.name }}_4" value="2" required>
+                    <label class="form-check-label" for="{{ question.name }}_4">2 Not good - Không được tốt (giọng quá nhiều yếu tố nhân tạo, giống robot)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="{{ question.name }}" id="{{ question.name }}_5" value="1" required>
+                    <label class="form-check-label" for="{{ question.name }}_5">1 Very bad - Rất tệ (không thể nghe được, phát âm sai hoặc không rõ ràng toàn bộ câu nói)</label>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
