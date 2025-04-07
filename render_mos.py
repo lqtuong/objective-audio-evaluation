@@ -21,7 +21,7 @@ wavs_dict={f: [] for f in wavs_folders}
 q_count = 1
 folder_to_question = {f: [] for f in wavs_folders}
 for f in wavs_dict:
-    if f == 'GT':
+    if 'GT' in f:
         for file in gt_files:
             wavs_dict[f].append(
                 {
@@ -37,23 +37,13 @@ for f in wavs_dict:
             wavs_dict[f].append(
                 {
                     "title": str(f"Question {q_count}: {file_text[gt_file]}"),
-                    "audio_path": str(os.path.join(WAVS_ROOT, f, rawfile_map[gt_file])),
+                    "audio_path": str(os.path.join(WAVS_ROOT, "scratch", rawfile_map[gt_file])),
                     "name": str(f"q{q_count}")
                 }
             )
             folder_to_question[f].append(f"q{q_count}")
             q_count += 1
-    else:
-        for file in choosen_files:
-            wavs_dict[f].append(
-                {
-                    "title": str(f"Question {q_count}: {file_text[genfiles_to_gt[file]]}"),
-                    "audio_path": str(os.path.join(WAVS_ROOT, f, file)),
-                    "name": str(f"q{q_count}")
-                }
-            )
-            folder_to_question[f].append(f"q{q_count}")
-            q_count += 1
+
     json.dump(folder_to_question, open('folder_to_questions.json', 'w+')) 
     
 wavs_list = [wavs_dict[f] for f in wavs_dict]
@@ -69,7 +59,7 @@ def main():
 
     html = template.render(
         page_title="MOS Evaluation",
-        form_url="https://script.google.com/macros/s/AKfycbxWHwOXOUGyxIg-ZWqqeF8a7iWcARif5IIC6ZOugECuLXCeT4pRgOYxZI5rTAmuScGpbQ/exec",
+        form_url="https://script.google.com/macros/s/1jh4qjZRqTv-o2Zxyn_poELrsNWpavOxMgdj3xrjUgJZag4HPDX_TvmDQ/exec",
         form_id=1,
         questions=wavs_list
     )
