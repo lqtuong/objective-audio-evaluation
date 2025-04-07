@@ -59,7 +59,7 @@ def main():
 
     html = template.render(
         page_title="MOS Evaluation",
-        form_url="https://script.google.com/macros/s/AKfycbxH5AJxqPjJEx3GudPP8CrTf2jXK_y4DaaLR2bBaBbcnlo6HkC4T2-QOD0W0SYZsAKVrw/exec",
+        form_url="https://script.google.com/macros/s/AKfycbzsjiF96oVWLHsMsATUfuXIKWVfMGpn6-mXdyG2skLfzchuvu6kHjnAMPK-iXe6jaDewg/exec",
         form_id=1,
         questions=wavs_list
     )
