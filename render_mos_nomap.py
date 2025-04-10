@@ -19,30 +19,29 @@ with open("scratch.txt", "r") as f:
 
 wavs_dict = {"GT": [], "scratch": []}
 folder_to_question = {"GT": [], "scratch": []}
+q_count = 1
 
-gt_count = 1
 for name in gt:
     wavs_dict['GT'].append(
         {
-            "title": str(f"Nội dung: {gt[name]}"),
+            "title": str(f"Sentence: {gt[name]}"),
             "audio_path": name,
-            "name": str(f"gt_{gt_count}")
+            "name": str(f"q{q_count}")
         }
     )
-    folder_to_question['GT'].append(f"gt_{gt_count}")
-    gt_count += 1
+    folder_to_question['GT'].append(f"q{q_count}")
+    q_count += 1
 
-gen_count = 1
 for name in scratch:
     wavs_dict["scratch"].append(
         {
-            "title": str(f"Nội dung: {scratch[name]}"),
+            "title": str(f"Sentence: {scratch[name]}"),
             "audio_path": name,
-            "name": str(f"gen_{gen_count}")
+            "name": str(f"q{q_count}")
         }
     )
-    folder_to_question['scratch'].append(f"gen_{gen_count}")
-    gen_count += 1
+    folder_to_question['scratch'].append(f"q{q_count}")
+    q_count += 1
 
 json.dump(folder_to_question, open('folder_to_questions.json', 'w+')) 
     
