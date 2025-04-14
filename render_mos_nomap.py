@@ -24,7 +24,7 @@ q_count = 1
 for name in gt:
     wavs_dict['GT'].append(
         {
-            "title": str(f"Sentence: {gt[name]}"),
+            "title": str(f"Sentence {q_count}: {gt[name]}"),
             "audio_path": name,
             "name": str(f"q{q_count}")
         }
@@ -35,7 +35,7 @@ for name in gt:
 for name in scratch:
     wavs_dict["scratch"].append(
         {
-            "title": str(f"Sentence: {scratch[name]}"),
+            "title": str(f"Sentence {q_count}: {scratch[name]}"),
             "audio_path": name,
             "name": str(f"q{q_count}")
         }
